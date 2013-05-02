@@ -1,0 +1,20 @@
+LIDAR ist das Kürzel für „Light Detection and Ranging“. Ein solches System hat im Grunde die gleiche Aufgabe wie ein RADAR-Gerät, 
+also die Erkennung der Richtung und Berechnung der Entfernung zu einem Hindernis. Im Gegensatz zu einem RADAR, welches Hindernisse 
+durch die an einer metallischen Oberfläche reflektierten Funkwellen (Frequenzbereich: 3kHz bis 3GHz) detektiert, funktioniert ein 
+LIDAR-System jedoch mit dem Senden und Empfangen von Lichtstrahlen.
+
+Das schon bestehende LIDAR Projekt wurde von mir fortgesetzt und optimiert. Dafür wurde eine Empfängerseitige Platine entworfen, 
+gefräst und bestückt, die die zeitkritischen Bauteile nur aus SMD enthält.
+
+
+Probleme und Fazit
+Das LIDAR-Projekt wurde wegen schaltungstechnischem Aufwand, der mit den normalen zu Verfügung stehenden Bauteilen, meiner Meinung nach, 
+nicht zu bewerkstelligen ist, beendet. Der Grund liegt zum einen in der extrem kurzen Signallaufzeit von Sende- zu Empfangsdiode. Um 
+einen Abstand von 2 m zu messen, muss das IR-Signal 4 m zurücklegen, was bei Lichtgeschwindigkeit 13,333 ns Laufzeit bedeutet. Zum 
+anderen wird das Empfangssignal bei größeren Entfernungen deutlich schlechter und die Flanken des Empfangen Signals werden zudem sehr 
+flach, was eine Rekonstruktion deutlich erschwert. Auch das Impulsverhalten von den verwendeten Sende und Empfangsdioden sind nicht für
+diese Art von Einsatz ausgelegt. Beide Bauteile reagieren deutlich zu träge. Ein weiteres Problem stellt die kapazitive Beeinflussung 
+der Sende- und Empfangseinheit dar. Schon geringste Leiterbahnstrecken die von beiden Einheiten parallel verlaufen machen das empfangene 
+Signal unbrauchbar. Die Signalaufbereitung mittels Vorverstärkertransistoren und Operationsverstärkern stellt hierbei das geringere 
+Problem dar, wie überhaupt ein brauchbares Signal zu empfangen.
+
